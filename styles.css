@@ -1,0 +1,38 @@
+/* Reset básico para quitar márgenes raros */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo para la sección Hero */
+#hero {
+    background-color: #1a202c; /* Un azul oscuro elegante */
+    color: white;
+    height: 100vh; /* Que ocupe el 100% de la altura de la pantalla */
+    
+    /* ACTIVAMOS FLEXBOX */
+    display: flex;
+    
+    /* Queremos que el título y el párrafo estén uno debajo del otro */
+    flex-direction: column; 
+    
+    /* Centramos horizontalmente */
+    justify-content: center; 
+    
+    /* Centramos verticalmente */
+    align-items: center; 
+    
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    color: #cbd5e0;
+}
