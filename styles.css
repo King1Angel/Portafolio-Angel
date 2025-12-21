@@ -36,3 +36,54 @@
     font-size: 1.5rem;
     color: #cbd5e0;
 }
+
+/* Estilos del Header/Navbar */
+header {
+    background-color: #2d3748; /* Un tono un poco más claro que el hero */
+    padding: 1rem 5%;
+    position: fixed; /* Para que el menú se quede arriba al hacer scroll */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* LA MAGIA: Logo a la izquierda, Links a la derecha */
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #4299e1; /* Color azul para destacar */
+}
+
+.nav-links {
+    display: flex; /* Flexbox otra vez para poner los <li> en fila */
+    list-style: none;
+    gap: 2rem; /* Separa los enlaces equitativamente */
+}
+
+.nav-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: white; /* Efecto al pasar el mouse */
+}
+
+/* Botón especial de contacto */
+.btn-contacto {
+    background-color: #4299e1;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
