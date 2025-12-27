@@ -8,22 +8,24 @@
 
 /* Estilo para la sección Hero */
 #hero {
-    background-color: #1a202c; /* Un azul oscuro elegante */
+    background-color: #1a202c;
+    /* Un azul oscuro elegante */
     color: white;
-    height: 100vh; /* Que ocupe el 100% de la altura de la pantalla */
-    
+    height: 100vh;
+    /* Que ocupe el 100% de la altura de la pantalla */
+
     /* ACTIVAMOS FLEXBOX */
     display: flex;
-    
+
     /* Queremos que el título y el párrafo estén uno debajo del otro */
-    flex-direction: column; 
-    
+    flex-direction: column;
+
     /* Centramos horizontalmente */
-    justify-content: center; 
-    
+    justify-content: center;
+
     /* Centramos verticalmente */
-    align-items: center; 
-    
+    align-items: center;
+
     text-align: center;
 }
 
@@ -39,9 +41,11 @@
 
 /* Estilos del Header/Navbar */
 header {
-    background-color: #2d3748; /* Un tono un poco más claro que el hero */
+    background-color: #2d3748;
+    /* Un tono un poco más claro que el hero */
     padding: 1rem 5%;
-    position: fixed; /* Para que el menú se quede arriba al hacer scroll */
+    position: fixed;
+    /* Para que el menú se quede arriba al hacer scroll */
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -49,7 +53,8 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* LA MAGIA: Logo a la izquierda, Links a la derecha */
+    justify-content: space-between;
+    /* LA MAGIA: Logo a la izquierda, Links a la derecha */
     align-items: center;
 }
 
@@ -61,13 +66,16 @@ header {
 }
 
 .logo span {
-    color: #4299e1; /* Color azul para destacar */
+    color: #4299e1;
+    /* Color azul para destacar */
 }
 
 .nav-links {
-    display: flex; /* Flexbox otra vez para poner los <li> en fila */
+    display: flex;
+    /* Flexbox otra vez para poner los <li> en fila */
     list-style: none;
-    gap: 2rem; /* Separa los enlaces equitativamente */
+    gap: 2rem;
+    /* Separa los enlaces equitativamente */
 }
 
 .nav-links a {
@@ -77,7 +85,8 @@ header {
 }
 
 .nav-links a:hover {
-    color: white; /* Efecto al pasar el mouse */
+    color: white;
+    /* Efecto al pasar el mouse */
 }
 
 /* Botón especial de contacto */
@@ -104,8 +113,9 @@ header {
 .grid-proyectos {
     display: grid;
     /* Crea 3 columnas iguales. Si la pantalla es pequeña, esto lo ajustaremos después */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; /* Espacio entre las tarjetas */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    /* Espacio entre las tarjetas */
 }
 
 /* ESTILO DE LAS TARJETAS */
@@ -113,17 +123,19 @@ header {
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Efecto de levante al pasar el mouse */
+    transform: translateY(-10px);
+    /* Efecto de levante al pasar el mouse */
 }
 
 .card-img {
     height: 200px;
-    background-color: #cbd5e0; /* Color temporal, aquí irían tus capturas de pantalla */
+    background-color: #cbd5e0;
+    /* Color temporal, aquí irían tus capturas de pantalla */
 }
 
 .card-content {
@@ -150,19 +162,120 @@ header {
 
 .btn-proyecto {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: transparent;
+    /* Fondo transparente al inicio */
     color: #4299e1;
+    border: 2px solid #4299e1;
+    /* Un borde elegante */
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
+    /* Letras mayúsculas para más impacto */
+    font-size: 0.8rem;
+
+    /* LA CLAVE: Transición suave para todas las propiedades en 0.3 segundos */
+    transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER (Al pasar el mouse) */
+.btn-proyecto:hover {
+    background-color: #4299e1;
+    /* El fondo se llena de color */
+    color: white;
+    /* El texto cambia a blanco para que se lea bien */
+    transform: scale(1.05);
+    /* El botón se agranda un 5% */
+    box-shadow: 0 5px 15px rgba(66, 153, 225, 0.4);
+    /* Sombra azul brillante */
+}
+
+/* EFECTO ACTIVE (Al hacer clic) */
+.btn-proyecto:active {
+    transform: scale(0.95);
+    /* El botón se encoge un poco, simulando un clic real */
+}
+
+#habilidades {
+    padding: 80px 5%;
+    background-color: white;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Si no caben en una fila, saltan a la siguiente */
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para los iconos */
+.skill-card i {
+    font-size: 3rem;
+    color: #4a5568;
+    /* Color gris profesional */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.skill-card p {
+    font-weight: bold;
+    color: #2d3748;
+}
+
+/* Efecto King: Cada icono brilla con su color original al pasar el mouse */
+.skill-card:hover i.fa-html5 {
+    color: #e34f26;
+}
+
+.skill-card:hover i.fa-css3-alt {
+    color: #1572b6;
+}
+
+.skill-card:hover i.fa-js {
+    color: #f7df1e;
+}
+
+.skill-card:hover i.fa-php {
+    color: #777bb4;
+}
+
+.skill-card:hover i.fa-laravel {
+    color: #ff2d20;
+}
+
+.skill-card:hover i.fa-git-alt {
+    color: #f05032;
+}
+/* El color oficial de MySQL es un azul oscuro/marino */
+.skill-card:hover i.fa-database {
+    color: #00758f; 
+    transform: rotate(10deg); /* Un pequeño toque extra: se inclina al tocarlo */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
 }
 
 /* --- RESPONSIVE DESIGN --- */
 
 /* Cuando la pantalla mida 768px o menos (Tablets y Celulares) */
 @media (max-width: 768px) {
-    
+
     .navbar {
-        flex-direction: column; /* El logo arriba y los links abajo */
+        flex-direction: column;
+        /* El logo arriba y los links abajo */
         gap: 1rem;
     }
 
@@ -172,11 +285,12 @@ header {
     }
 
     #hero h1 {
-        font-size: 2rem; /* Reducimos el tamaño de letra en móvil */
+        font-size: 2rem;
+        /* Reducimos el tamaño de letra en móvil */
     }
 
     /* LA MAGIA DEL GRID: Pasamos de 3 columnas a 1 */
     .grid-proyectos {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
