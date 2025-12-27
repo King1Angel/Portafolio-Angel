@@ -258,14 +258,78 @@ header {
 .skill-card:hover i.fa-git-alt {
     color: #f05032;
 }
+
 /* El color oficial de MySQL es un azul oscuro/marino */
 .skill-card:hover i.fa-database {
-    color: #00758f; 
-    transform: rotate(10deg); /* Un pequeño toque extra: se inclina al tocarlo */
+    color: #00758f;
+    transform: rotate(10deg);
+    /* Un pequeño toque extra: se inclina al tocarlo */
 }
 
 .skill-card:hover {
     transform: translateY(-5px);
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* ¡Magia Responsiva! */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contacto-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    /* Quita el subrayado del link */
+    color: #2d3748;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.contacto-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #4299e1;
+}
+
+.contacto-card h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.contacto-card p {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+/* Efecto Hover para que se note que es un link */
+.contacto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    border-color: #4299e1;
+}
+
+/* Colores específicos en hover para darle personalidad */
+.contacto-card:hover i.fa-whatsapp {
+    color: #25D366;
+}
+
+.contacto-card:hover i.fa-linkedin {
+    color: #0077B5;
+}
+
+.contacto-card:hover i.fa-github {
+    color: #333;
+}
+
+.contacto-card:hover i.fa-envelope {
+    color: #EA4335;
 }
 
 /* --- RESPONSIVE DESIGN --- */
