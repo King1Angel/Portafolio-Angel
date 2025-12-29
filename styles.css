@@ -6,6 +6,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Estilo para la sección Hero */
 #hero {
     background-color: #1a202c;
@@ -266,6 +270,27 @@ header {
     /* Un pequeño toque extra: se inclina al tocarlo */
 }
 
+/* Docker - Azul ballena */
+.skill-card:hover i.fa-docker {
+    color: #2496ed;
+}
+
+/* Linux - Negro/Gris oscuro (o podrías usar #fcc624 para el amarillo del pingüino) */
+.skill-card:hover i.fa-linux {
+    color: #333333;
+}
+
+/* Python - Azul acero (uno de sus dos colores oficiales) */
+.skill-card:hover i.fa-python {
+    color: #3776ab;
+}
+
+/* MongoDB - Verde hoja */
+/* Nota: Si usas fas fa-leaf como representante de Mongo */
+.skill-card:hover i.fa-leaf {
+    color: #47a248;
+}
+
 .skill-card:hover {
     transform: translateY(-5px);
 }
@@ -330,6 +355,36 @@ header {
 
 .contacto-card:hover i.fa-envelope {
     color: #EA4335;
+}
+
+footer {
+    background-color: #1a202c;
+    /* El mismo tono oscuro del hero */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4299e1;
 }
 
 /* --- RESPONSIVE DESIGN --- */
